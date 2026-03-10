@@ -1,0 +1,40 @@
+{
+  "books": [
+    {
+      "title": "The Rust Programming Language",
+      "author": "Steve Klabnik & Carol Nichols",
+      "isbn": "978-1-59327-828-1",
+      "availablable": "Available"
+    },
+    {
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "isbn": "978-0-13-235088-4",
+      "availablable": "NotAvailable"
+    },
+    {
+      "title": "The Pragmatic Programmer",
+      "author": "Andrew Hunt & David Thomas",
+      "isbn": "978-0-13-595705-9",
+      "availablable": "Available"
+    },
+    {
+      "title": "Introduction to Algorithms",
+      "author": "Thomas H. Cormen",
+      "isbn": "978-0-262-03384-8",
+      "availablable": "Available"
+    },
+    {
+      "title": "the book",
+      "author": "unknown",
+      "isbn": "1234567890123456",
+      "availablable": "NotAvailable"
+    },
+    {
+      "title": "the not book",
+      "author": "unknown",
+      "isbn": "1234567890123456",
+      "availablable": "Available"
+    }
+  ]
+}
