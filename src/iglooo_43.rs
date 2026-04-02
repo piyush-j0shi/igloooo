@@ -47,3 +47,4 @@ fn main() {
 
     println!("final result : {:?}", storage.lock().unwrap());
 }
+

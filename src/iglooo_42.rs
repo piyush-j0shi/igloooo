@@ -23,6 +23,7 @@ impl Storage {
     }
 }
 
+
 fn main() {
     let storage = Storage::new();
     let storage_thread = storage.clone();
