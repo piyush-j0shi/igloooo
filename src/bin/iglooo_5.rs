@@ -19,7 +19,7 @@ fn read_no_of_subjects() -> Result<i32> {
     Ok(parsed)
 }
 
-fn average(numbers: &Vec<f64>) -> Result<f64> {
+fn average(numbers: &[f64]) -> Result<f64> {
     let total_subjects = numbers.len() as f64;
     if numbers.is_empty() {
         // println!("total marks can not be empty");
