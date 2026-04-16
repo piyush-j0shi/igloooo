@@ -12,8 +12,8 @@ impl<T> MyBox<T> {
         self.some_value
     }
 
-    fn map<U, F: Fn(T) -> U>(self, f: F) -> MyBox<U> {
-        let some_other_value: U = f(self.some_value);
+    fn map<U, F: Fn(&T) -> U>(&self, f: F) -> MyBox<U> {
+        let some_other_value: U = f(&self.some_value);
         MyBox {
             some_value: some_other_value,
         }
