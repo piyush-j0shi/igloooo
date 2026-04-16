@@ -23,7 +23,7 @@ fn average(numbers: &[f64]) -> Result<f64> {
     let total_subjects = numbers.len() as f64;
     if numbers.is_empty() {
         // println!("total marks can not be empty");
-        anyhow::bail!("total marks can not be empyt");
+        anyhow::bail!("total marks can not be empty");
         // return 0.0;
     } else {
         let mut sum = 0.0;
