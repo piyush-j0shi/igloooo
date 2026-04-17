@@ -35,6 +35,12 @@
       "author": "unknown",
       "isbn": "1234567890123456",
       "availablable": "Available"
+    },
+    {
+      "title": "thinking fast and slow",
+      "author": "unknown",
+      "isbn": "1234567890123456",
+      "availablable": "Available"
     }
   ]
 }
