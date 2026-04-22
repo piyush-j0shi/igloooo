@@ -24,7 +24,7 @@ fn main() {
                     let input = format!("{}{}", block, nonce);
                     let hash = Sha256::digest(&input);
 
-                    if hash.starts_with(&[0, 0]) {
+                    if hash.starts_with(&[0, 0, 0]) {
                         println!("thread {} found nonce: {}", i, nonce);
                         println!("hash: {:x}", hash);
 
