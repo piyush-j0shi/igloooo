@@ -8,27 +8,33 @@ impl<T, E> Collector<T, E> {
     }
 
     fn successes(&self) -> Vec<&T> {
-        let mut new_vec: Vec<&T> = Vec::new();
+        // let mut new_vec: Vec<&T> = Vec::new();
 
-        for item in &self.vecte {
-            match item {
-                Ok(value) => new_vec.push(value),
-                Err(error) => (),
-            }
-        }
-        return new_vec;
+        // for item in &self.vecte {
+        // match item {
+        // Ok(value) => new_vec.push(value),
+        // Err(error) => (),
+        // }
+        // }
+
+        self.vecte.iter().filter_map(|f| f.as_ref().ok()).collect()
+
+        // return new_vec;
     }
 
     fn errors(&self) -> Vec<&E> {
-        let mut new_vec: Vec<&E> = Vec::new();
+        // let mut new_vec: Vec<&E> = Vec::new();
 
-        for item in &self.vecte {
-            match item {
-                Ok(value) => (),
-                Err(error) => new_vec.push(error),
-            }
-        }
-        return new_vec;
+        // for item in &self.vecte {
+        // match item {
+        // Ok(value) => (),
+        // Err(error) => new_vec.push(error),
+        // }
+        // }
+
+        self.vecte.iter().filter_map(|f| f.as_ref().err()).collect()
+
+        // return new_vec;
     }
 
     fn all_ok(self) -> Result<Vec<T>, E> {

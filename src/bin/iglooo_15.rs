@@ -17,36 +17,61 @@ struct ParsedPost {
 }
 
 fn extract_hashtags(post: &str) -> Vec<String> {
-    let mut hashtags: Vec<String> = Vec::new();
+    // let mut hashtags: Vec<String> = Vec::new();
 
-    for word in post.split_whitespace() {
-        if word.starts_with('#') {
-            hashtags.push(word.to_string());
-        }
-    }
-    hashtags
+    // for word in post.split_whitespace() {
+    // if word.starts_with('#') {
+    // hashtags.push(word.to_string());
+    // }
+    // }
+
+    // post.split_whitespace()
+    // .filter_map(|f| f.starts_with("#").then_some(f.to_string()))
+    // .collect()
+
+    post.split_whitespace()
+        .filter(|f| f.starts_with("#"))
+        .map(|f| f.to_string())
+        .collect()
+
+    // hashtags
 }
 
 fn extract_mentions(post: &str) -> Vec<String> {
-    let mut mentions: Vec<String> = Vec::new();
+    // let mut mentions: Vec<String> = Vec::new();
 
-    for words in post.split_whitespace() {
-        if words.starts_with("@") {
-            mentions.push(words.to_string());
-        }
-    }
-    mentions
+    // for words in post.split_whitespace() {
+    // if words.starts_with("@") {
+    // mentions.push(words.to_string());
+    // }
+    // }
+
+    // post.split_whitespace()
+    // .filter_map(|f| f.starts_with("@").then_some(f.to_string()))
+    // .collect()
+
+    post.split_whitespace()
+        .filter(|f| f.starts_with("@"))
+        .map(|f| f.to_string())
+        .collect()
+
+    // mentions
 }
 
 fn extract_links(post: &str) -> Vec<String> {
-    let mut links: Vec<String> = Vec::new();
+    // let mut links: Vec<String> = Vec::new();
+    // for words in post.split_whitespace() {
+    // if words.starts_with("http") || words.starts_with("https") || words.starts_with("www") {
+    // links.push(words.to_string());
+    // }
+    // }
 
-    for words in post.split_whitespace() {
-        if words.starts_with("http") || words.starts_with("https") || words.starts_with("www") {
-            links.push(words.to_string());
-        }
-    }
-    links
+    post.split_whitespace()
+        .filter(|f| f.starts_with("http") || f.starts_with("https") || f.starts_with("www"))
+        .map(|f| f.to_string())
+        .collect()
+
+    // links
 }
 
 fn analyze_sentiment(content: &str) -> Sentiment {
